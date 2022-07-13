@@ -1,0 +1,45 @@
+/* body {
+  text-align: center;
+} */
+
+.cube {
+  position: relative;
+  width: 150px;
+  cursor: pointer;
+}
+
+.cube:hover {
+  animation-name: animation;
+  animation-duration: 5s;
+}
+
+.side {
+  color: red;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-color: cornflowerblue;
+  position: absolute;
+}
+
+.top {
+  transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.left {
+  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+
+.right {
+  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+@keyframes animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
